@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* Please ❤ this if you like it! */
+/* Follow Me https://codepen.io/designfenix */
+/*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+:root {
+  --app-width: 375px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #aab3c4;
+}
+@media (max-width: 875px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+}
+
+.calc {
+  width: var(--app-width);
+  border-radius: 50px;
+  min-height: 650px;
+  padding: 60px 20px;
+  padding-bottom: 40px;
+  position: relative;
+  background: linear-gradient(140deg, #32323a 0%, #0e0e0e 100%);
+}
+@media (max-width: 875px) {
+  .calc {
+    margin: 40px 0;
+    min-height: 680px;
+  }
+}
+.calc:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -15%;
+  left: -23%;
+  height: 30%;
+  width: 70%;
+  box-shadow: 170px -170px 20px 0 rgba(0, 0, 0, 0.25);
+  transform: skewX(-40deg);
+}
+.calc .row {
+  text-align: center;
+}
+.calc .math {
+  font-size: 28px;
+  color: #7d8391;
+  font-family: Roboto, sans-serif;
+  text-align: right;
+  padding-bottom: 15px;
+  margin-right: 20px;
+  padding-top: 80px;
+}
+.calc .result {
+  font-size: 72px;
+  color: #fcfcfc;
+  font-family: Roboto, sans-serif;
+  text-align: right;
+  padding-bottom: 45px;
+  margin-right: 20px;
+}
+.calc button {
+  background: linear-gradient(140deg, #3e4a58 10%, #626d81 100%);
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  margin: 3px;
+  color: #fcfcfc;
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  height: calc(var(--app-width) / 4.5);
+  width: calc(var(--app-width) / 4.5);
+  border-radius: 30px;
+  /*#505767*/
+  transition: ease all 0.3s;
+  box-shadow: inset -3px -3px 3px rgba(0, 0, 0, 0.2), inset 3px 3px 3px rgba(255, 255, 255, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.05);
+}
+.calc button.large {
+  width: calc(var(--app-width) / 4.5 * 2.15);
+}
+.calc button.dark {
+  background: linear-gradient(140deg, #232732 10%, #3b4053 100%);
+}
+.calc button.orange {
+  box-shadow: inset -3px -3px 3px rgba(0, 0, 0, 0.2), inset 3px 3px 3px rgba(255, 255, 255, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(140deg, #c35f2e 10%, #e78f23 100%);
+}
+.calc button:hover {
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.2), inset -3px -3px 3px rgba(255, 255, 255, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.05);
+}
+.calc button:active {
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2), inset -3px -3px 3px rgba(110, 110, 110, 0.1), 4px 4px 8px rgba(0, 0, 0, 0.05);
+}
+.calc.light {
+  background: linear-gradient(140deg, #e7e8ec 0%, #d8d8d8 100%);
+}
+.calc.light .math {
+  color: #909399;
+}
+.calc.light .result {
+  color: #373f4b;
+}
+.calc.light button.dark {
+  background: linear-gradient(140deg, #d9d4da 10%, #e8e3e9 100%);
+  color: #606060;
+}
+.calc.light button.orange {
+  background: linear-gradient(140deg, #9b875c 10%, #ebce8f 100%);
+}
